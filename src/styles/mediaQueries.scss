@@ -1,0 +1,61 @@
+/*
+ * BREACKPOINTS REFERENCE FROM
+ * https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+ *
+ * other usabe reference
+ * https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/
+ */
+
+/* -----------
+ * DESKTOP
+ *
+ * max-device-width: 5000px;
+ * min-device-width: 1200px;
+ * ----------- */
+ @import '@/styles/mq_desktop.scss';
+
+
+/* -----------
+ * SMALL DESKTOP
+ *
+ * max-device-width: 1200px;
+ * min-device-width: 1024px;
+ * ----------- */
+ @import '@/styles/mq_smallDesktop.scss';
+
+
+/* -----------
+ * Tablets - iPad 3, 4 and Pro 9.7"
+ *
+ * max-device-width: 1024px;
+ * min-device-width: 700px;
+ * ----------- */
+ @import '@/styles/mq_tablets.scss';
+
+
+/* -----------
+ * Mobiles iPhone 6, 6S, 7 and 8
+ *
+ * max-device-width: 668px;
+ * min-device-width: 375px;
+ * ----------- */
+ @import '@/styles/mq_mobiles.scss';
+
+
+ /* -----------
+ * SMALL Mobiles ( iPhone 5, 4 ) / galaxy s3
+ *
+ * max-device-width: 667px;
+ * min-device-width: 320px;
+ * ----------- */
+ @import '@/styles/mq_smallMobiles.scss';
+
+
+  /* -----------
+ * FEATURE PHONES: KaiOS JioPhone
+ *
+ * max-device-width: 319px;
+ * min-device-width: 150px;
+ * ----------- */
+ @import '@/styles/mq_featurePhones.scss';
+

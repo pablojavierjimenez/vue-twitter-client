@@ -1,0 +1,42 @@
+
+$mobile_max-device-width: 668px;
+$mobile_min-device-width: 375px;
+
+@media only screen
+  and ( min-device-width: $mobile_min-device-width ) /* deberia ser hasta 375px pero sino me quedaba un hueco*/
+  and ( max-device-width: $mobile_max-device-width ) /* deberia ser hasta 667px pero sino me quedaba un hueco*/
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    %mobile_container {
+        width: 100vw;
+        max-width: 100vw;
+    }
+
+    #app {
+        @extend %mobile_container;
+
+        #header {
+          @extend %mobile_container;
+          #mobiles_modo{
+            display: block;
+          }
+          .menulink__container {
+            display: none;
+          }
+        }
+
+        #main {
+            // background-color: rgb(235, 131, 33);
+            border: 1px solid #7042b9;
+            min-height: 100vh;
+            @extend %mobile_container;
+        }
+
+        #footer {
+            @extend %mobile_container;
+            .link_text {
+              display: none;
+            }
+        }
+    }
+}

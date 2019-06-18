@@ -1,0 +1,45 @@
+
+$desktop_max-device-width: 5000px;
+$desktop_min-device-width: 1200px;
+
+@media screen
+  and ( min-device-width: $desktop_min-device-width )
+  and ( max-device-width: $desktop_max-device-width ) {
+
+    %desktop_container {
+        width: 100vw;
+    }
+
+    #app {
+        @extend %desktop_container;
+
+        #header {
+          width: 100vw;
+          #desktop_modo{
+            display: block;
+          }
+        }
+        #main {
+            // background-color: red;
+            border: 1px solid #7042b9;
+            min-height: 100vh;
+            max-width: 1200px;
+            @extend %desktop_container;
+            .twitterListItem_item {
+              border: 1px solid #7042b9;
+              // background-color: rgb(165, 206, 32);
+              max-height: 129px;
+            }
+            .trends{
+              &_item {
+                min-width: initial;
+                width: calc(1200px/4.5);
+              }
+            }
+        }
+        #footer {
+          display: none;
+            @extend %desktop_container;
+        }
+    }
+}

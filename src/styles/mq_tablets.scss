@@ -1,0 +1,52 @@
+
+
+$tablet_max-device-width: 1024px;
+$tablet_min-device-width: 700px;
+
+@media only screen
+  and ( min-device-width: $tablet_min-device-width ) /* deberia ser hasta 768px pero sino me quedaba un hueco*/
+  and ( max-device-width: $tablet_max-device-width )
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    %tablets_container {
+        width: 100vw;
+        max-width: 1024px;
+    }
+
+    #app {
+        @extend %tablets_container;
+
+        #header {
+          @extend %tablets_container;
+          #tablets_modo{
+            display: block;
+          }
+          .menulink__container {
+            display: none;
+          }
+        }
+
+        #main {
+            // background-color: rgb(33, 188, 235);
+            border: 1px solid #7042b9;
+            min-height: 100vh;
+            @extend %tablets_container;
+            .trends{
+              &_item {
+                width: 30vw;
+                display: flex;
+                justify-content: space-between;
+              }
+            }
+        }
+
+        #footer {
+            @extend %tablets_container;
+            .MenuNav {
+              span.link_text{
+                display: none;
+              }
+            }
+        }
+    }
+}

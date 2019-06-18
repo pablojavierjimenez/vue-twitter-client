@@ -1,0 +1,114 @@
+
+$featurePhones_max-device-width: 319px;
+$featurePhones_min-device-width: 150px;
+
+@media only screen
+  and ( max-device-width: $featurePhones_max-device-width )
+  and ( min-device-width: $featurePhones_min-device-width )
+  {
+
+    %featurePhones_container {
+        width: 100vw;
+        // min-width: 360px;
+    }
+
+    #app {
+        font-size: 1em;
+        @extend %featurePhones_container;
+
+        #header {
+          @extend %featurePhones_container;
+          padding: 1.5vh 2vmin 1vh 2vmin;
+          #feature_modo{
+            display: block;
+          }
+          .header_logo__image {
+              max-width: 10vmin;
+          }
+
+          #hamburger_image__container {
+              display: block;
+          }
+          #brand {
+            #page_title {
+              display: none;
+            }
+          }
+          .menulink__container {
+            display: none;
+          }
+        }
+
+        #main {
+            // background-color: hsl(0, 0%, 7%);
+            // border: 1px solid #7042b9;
+            font-size: 12px;
+            line-height: 15px;
+            min-height: 100vh;
+            padding: 11vh 0;
+            @extend %featurePhones_container;
+
+            .TwitSingeItem{
+              &__content {
+                padding: 1vh 0;
+              }
+              &__userName {
+                display: none;
+              }
+              &__text {
+                // color: #ffffff;
+                padding: 1vh 0;
+              }
+              &__footer{
+                justify-content: space-between;
+                span {
+                  width: 30vw;
+                }
+                &_icon {
+                  width: 5vmin;
+                  height: 5vmin;
+                }
+              }
+            }
+            .friends {
+              &__unreade {
+                padding: 1vmin;
+              }
+
+              ul {
+                margin: 0;
+                padding: 0 1vw;
+                display: block;
+                flex-wrap: nowrap;
+              }
+              .friends_item {
+                // border: 1px solid #7042b9;
+                // background-color: rgb(165, 206, 32);
+                max-height: 129px;
+                min-width: 94vw;
+                width: 100vw;
+                margin: 2vmin 2vmin 5vmin;
+                padding: 2vmin;
+                border-radius: 4vmin;
+                &__user{
+                  // background-color: #2331fd;
+                  min-width: 20vmin;
+                  min-height: 20vmin;
+                }
+              }
+            }
+            .trends{
+              &_item {
+                min-width: 95vw;
+                display: flex;
+                justify-content: space-between;
+              }
+            }
+        }
+
+        #footer {
+            display: none;
+            @extend %featurePhones_container;
+        }
+    }
+}

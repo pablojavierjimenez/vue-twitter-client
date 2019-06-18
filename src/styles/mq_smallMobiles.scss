@@ -1,0 +1,82 @@
+
+$smallMobile_max-device-width: 667px;
+$smallMobile_min-device-width: 320px;
+
+@media only screen
+  and ( max-device-width: $smallMobile_max-device-width ) /* deberia ser hasta 667px pero sino me quedaba un hueco*/
+  and ( min-device-width: $smallMobile_min-device-width ) /* deberia ser hasta 375px pero sino me quedaba un hueco*/
+  {
+
+    %small_mobile_container {
+        width: 100vw;
+        max-width: 100vw;
+    }
+
+    #app {
+      @extend %small_mobile_container;
+
+      #header {
+        @extend %small_mobile_container;
+        #small_mobiles_modo{
+          display: block;
+        }
+        #brand {
+          #page_title {
+            display: none;
+          }
+        }
+        .menulink__container {
+          display: none;
+        }
+      }
+
+      #main {
+        // background-color: rgb(235, 131, 33);
+        // border: 1px solid #7042b9;
+        min-height: 100vh;
+        @extend %small_mobile_container;
+        .friends {
+          &__unreade {
+            padding: 1vmin;
+          }
+
+          ul {
+            margin: 0;
+            padding: 0 1vw;
+            display: block;
+            flex-wrap: nowrap;
+          }
+          .friends_item {
+            // border: 1px solid #7042b9;
+            // background-color: rgb(165, 206, 32);
+            max-height: 129px;
+            min-width: 94vw;
+            width: 100vw;
+            margin: 2vmin 2vmin 5vmin;
+            padding: 2vmin;
+            border-radius: 4vmin;
+            &__user{
+              // background-color: #2331fd;
+              min-width: 20vmin;
+              min-height: 20vmin;
+            }
+          }
+        }
+        .trends{
+          &_item {
+            min-width: 95vw;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+      }
+
+      #footer {
+        @extend %small_mobile_container;
+
+        .link_text {
+          display: none;
+        }
+      }
+    }
+  }

@@ -1,0 +1,22 @@
+/*
+ * https://sass-lang.com/guide
+ */
+
+
+:root {
+    --color_theme_1: #fdefde;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.app_container {
+  margin: 2vmin;
+  padding: 2vmin;
+}
