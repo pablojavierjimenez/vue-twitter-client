@@ -1,6 +1,6 @@
 
 
-$smallDesktop_max-device-width: 1200px;
+$smallDesktop_max-device-width: 1300px;
 $smallDesktop_min-device-width: 1024px;
 
 @media screen
@@ -27,6 +27,11 @@ $smallDesktop_min-device-width: 1024px;
           border: 1px solid #7042b9;
           min-height: 100vh;
           @extend %smallDesktop_container;
+          .friends {
+            &_item {
+              width: 45vw;
+            }
+          }
         }
 
         #footer {

@@ -48,11 +48,11 @@ $smallMobile_min-device-width: 320px;
           }
           .friends_item {
             // border: 1px solid #7042b9;
-            // background-color: rgb(165, 206, 32);
-            max-height: 129px;
+            background-color: rgb(165, 206, 32);
+            // max-height: 129px;
             min-width: 94vw;
             width: 100vw;
-            margin: 2vmin 2vmin 5vmin;
+            margin: 2vmin 2vmin;
             padding: 2vmin;
             border-radius: 4vmin;
             &__user{

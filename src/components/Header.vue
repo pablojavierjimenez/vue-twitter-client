@@ -58,7 +58,7 @@
   top: 0;
   align-items: flex-end;
   max-width: 100vw;
-
+  box-shadow: 0px 0px 3px grey;
   &>span.header_button__container {
     width: 8vmin;
   }

@@ -77,6 +77,8 @@ export default {
 
 #main {
   padding: 8vh 0;
+  display: flex;
+  justify-content: center;
   // background: aquamarine;
 }
 

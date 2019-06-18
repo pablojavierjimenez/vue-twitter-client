@@ -14,39 +14,71 @@ $tablet_min-device-width: 700px;
     }
 
     #app {
-        @extend %tablets_container;
+      @extend %tablets_container;
 
-        #header {
-          @extend %tablets_container;
-          #tablets_modo{
-            display: block;
+      #header {
+        @extend %tablets_container;
+        #tablets_modo{
+          display: block;
+        }
+        .menulink__container {
+          display: none;
+        }
+      }
+
+      #main {
+        // background-color: rgb(33, 188, 235);
+        border: 1px solid #7042b9;
+        min-height: 100vh;
+        @extend %tablets_container;
+        .trends{
+          &_item {
+            width: 30vw;
+            display: flex;
+            justify-content: space-between;
           }
-          .menulink__container {
+        }
+        .friends {
+          display: flex;
+          justify-content: center;
+          &_item {
+            width: 40vw;
+          }
+        }
+      }
+
+      #footer {
+        @extend %tablets_container;
+        display: flex;
+        .MenuNav {
+          span.link_text{
             display: none;
           }
         }
-
-        #main {
-            // background-color: rgb(33, 188, 235);
-            border: 1px solid #7042b9;
-            min-height: 100vh;
-            @extend %tablets_container;
-            .trends{
-              &_item {
-                width: 30vw;
-                display: flex;
-                justify-content: space-between;
-              }
-            }
-        }
-
-        #footer {
-            @extend %tablets_container;
-            .MenuNav {
-              span.link_text{
-                display: none;
-              }
-            }
-        }
+      }
     }
 }
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+// @media only screen
+//   and (min-device-width: 1024px)
+//   and (max-device-width: 1366px)
+//   and (-webkit-min-device-pixel-ratio: 2) {
+
+//   %tabletsPro_container {
+//     width: 100vw;
+//     max-width: 1366px;
+//   }
+//   #app {
+//     #footer {
+//       @extend %tabletsPro_container;
+//       display: flex;
+//       .MenuNav {
+//         span.link_text{
+//         }
+//       }
+//     }
+//   }
+// }
