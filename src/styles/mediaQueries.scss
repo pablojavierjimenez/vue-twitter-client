@@ -6,22 +6,33 @@
  * https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/
  */
 
-/* -----------
- * DESKTOP
- *
- * max-device-width: 5000px;
- * min-device-width: 1200px;
- * ----------- */
- @import '@/styles/mq_desktop.scss';
 
 
 /* -----------
- * SMALL DESKTOP
+ * FEATURE PHONES: KaiOS JioPhone
  *
- * max-device-width: 1200px;
- * min-device-width: 1024px;
+ * max-device-width: 319px;
+ * min-device-width: 150px;
  * ----------- */
- @import '@/styles/mq_smallDesktop.scss';
+ @import '@/styles/mq_featurePhones.scss';
+
+
+ /* -----------
+ * SMALL Mobiles ( iPhone 5, 4 ) / galaxy s3
+ *
+ * max-device-width: 667px;
+ * min-device-width: 320px;
+ * ----------- */
+ @import '@/styles/mq_smallMobiles.scss';
+
+
+/* -----------
+ * Mobiles iPhone 6, 6S, 7 and 8
+ *
+ * max-device-width: 668px;
+ * min-device-width: 375px;
+ * ----------- */
+ @import '@/styles/mq_mobiles.scss';
 
 
 /* -----------
@@ -34,28 +45,20 @@
 
 
 /* -----------
- * Mobiles iPhone 6, 6S, 7 and 8
+ * SMALL DESKTOP
  *
- * max-device-width: 668px;
- * min-device-width: 375px;
+ * max-device-width: 1200px;
+ * min-device-width: 1024px;
  * ----------- */
- @import '@/styles/mq_mobiles.scss';
+ @import '@/styles/mq_smallDesktop.scss';
 
 
- /* -----------
- * SMALL Mobiles ( iPhone 5, 4 ) / galaxy s3
+/* -----------
+ * DESKTOP
  *
- * max-device-width: 667px;
- * min-device-width: 320px;
+ * max-device-width: 5000px;
+ * min-device-width: 1200px;
  * ----------- */
- @import '@/styles/mq_smallMobiles.scss';
+ @import '@/styles/mq_desktop.scss';
 
-
-  /* -----------
- * FEATURE PHONES: KaiOS JioPhone
- *
- * max-device-width: 319px;
- * min-device-width: 150px;
- * ----------- */
- @import '@/styles/mq_featurePhones.scss';
 

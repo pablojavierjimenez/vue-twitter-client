@@ -1,32 +1,49 @@
 <template>
   <div id="favorites">
-    <h2>FAVORITES</h2>
+
+    <TwitterList class="twitList" :twitItemList="favoritesList" />
+
+    <TwitSingleItemDetails></TwitSingleItemDetails>
+
   </div>
 </template>
 
 <script>
 import { mapState, mapMutations, mapGetters, mapActions } from "vuex";
-// import SingleUser from "@/components/SingleUser.vue";
+import TwitterList from '@/components/TwitterList.vue'
+import TwitSingleItemDetails from '@/components/TwitSingleItemDetails.vue'
 
 export default {
   name: "favorites",
-  components: {},
+  components: {
+    TwitterList,
+    TwitSingleItemDetails
+  },
   props: {},
   data() {
     return {
       name: "pepe"
     };
   },
-  computed: {},
-  methods: {},
-  /**
-   * HOOKS
-   */
-  beforeCreated() {},
-  // created se recomienda como el mejor hook para interactuar con data del servidor
+  computed: {
+    ...mapState(["favoritesList"]),
+    ...mapGetters(["get_favoritesList"]),
+    ...mapActions(["act_setFavoritesList"]),
+    // hasta donde entiendo no deberia iportar la mutaciones y manejarme exclusivamente con las acciones
+    // pero con eso de esto combiene en sincrono y esto en no-cincrono ya no se bien
+    // por las dudas dejo el ejemplo
+    ...mapMutations(["mut_setFavoritesList"])
+  },
   created() {
-    // osea que aca tendria ( creo ) que hacer la llamada para traer la data de server
-    // this.$store.dispatch('act_setUserListDataFromServer', count);
+
+    this.$store.dispatch('act_setFavoritesList');
+
+    console.log('itemlist', this.favoritesList );
+    // twitterListFromServer () {
+    //   console.log( 'tuiter list compo: ', this.$store.getters.get_TwitList);
+    //   return this.$store.getters.get_TwitList;
+    // }
+
   },
   beforeMount() {},
   mounted() {},
@@ -42,5 +59,13 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss">
+.favorites {
+  display:flex;
+  flex-direction: column;
+  .twitList {
+    // background-color: #c3fd45;
+    min-width: 40vw;
+  }
+}
 </style>

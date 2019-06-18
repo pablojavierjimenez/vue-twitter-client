@@ -86,7 +86,7 @@
       width: 27vw;
       margin: 2vmin;
       &__container {
-        // border-bottom: 1px solid #b072ea;
+        // border-bottom: 1px solid #3e3860;
         display: flex;
         // margin-bottom: 2vh;
       }
@@ -94,10 +94,10 @@
         // background-color: #2331fd;
         min-width: 10vmin;
         min-height: 10vmin;
-        &__image {
-          // width: 6vmin;
-          // max-width: 7vmin;
-        }
+        // &__image {
+        //   width: 6vmin;
+        //   max-width: 7vmin;
+        // }
       }
     }
   }

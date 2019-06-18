@@ -35,7 +35,10 @@ export default {
     // width: 6vmin;
     // max-width: 7vmin;
     border-radius: 50%;
-
+    .header_icon__container {
+      min-width: 10vmin;
+      min-height: 10vmin;
+    }
     &__image {
       width: 100%;
       max-width: 20vmin;
