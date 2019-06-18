@@ -24,17 +24,55 @@ $smallMobile_min-device-width: 320px;
           #page_title {
             display: none;
           }
+          .header_button__container {
+            min-width: 10vmin;
+            min-height: 10vmin;
+            a {
+              background-color: red;
+              .header_logo__image {
+                .header_logo__image {
+                  width: 10vmin;
+                  max-width: 10vmin;
+                }
+              }
+            }
+          }
         }
         .menulink__container {
           display: none;
+        }
+        .header_button__container {
+          .userAvatar__image {
+            width: 9vmin;
+            max-width: 10vmin;
+            border-radius: 50%;
+          }
         }
       }
 
       #main {
         // background-color: rgb(235, 131, 33);
-        // border: 1px solid #7042b9;
+        // border: 1px solid #3e3860;
         min-height: 100vh;
         @extend %small_mobile_container;
+        .twitterList_item {
+          .TwitSingeItem__content {
+            footer {
+              span {
+                width: 25vmin;
+                display: flex;
+                justify-content: start;
+                align-items: flex-start;
+
+                .TwitSingeItem__footer_icon {
+                  width: 4vmin;
+                  height: 4vmin;
+                  margin-right: 1vmin;
+                }
+              }
+            }
+          }
+        }
         .friends {
           &__unreade {
             padding: 1vmin;
@@ -47,12 +85,12 @@ $smallMobile_min-device-width: 320px;
             flex-wrap: nowrap;
           }
           .friends_item {
-            // border: 1px solid #7042b9;
-            // background-color: rgb(165, 206, 32);
-            max-height: 129px;
+            // border: 1px solid #3e3860;
+            background-color: rgb(165, 206, 32);
+            // max-height: 129px;
             min-width: 94vw;
             width: 100vw;
-            margin: 2vmin 2vmin 5vmin;
+            margin: 2vmin 2vmin;
             padding: 2vmin;
             border-radius: 4vmin;
             &__user{

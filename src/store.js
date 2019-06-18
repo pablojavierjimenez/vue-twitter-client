@@ -17,6 +17,7 @@ export default new Vuex.Store({
         text: 'default text'
       }
     },
+    favoritesList: []
     // searchTwitList: [],       // http://localhost:8000/search?q=front%20end
     // showSingleTwit: {},       // http://localhost:8000/show?id=1011417658833551361
   },
@@ -40,6 +41,9 @@ export default new Vuex.Store({
     },
     get_singleTwitDetailsData(state) {
       return state.singleTwitDetailsData;
+    },
+    get_favoritesList(state) {
+      return state.favoritesList;
     },
   },
 
@@ -69,6 +73,9 @@ export default new Vuex.Store({
     // TWITTER ITEM
     mut_singleTwitDetailsData(state, newSingleTwitDetailsData) {
       return state.singleTwitDetailsData = newSingleTwitDetailsData;
+    },
+    mut_setFavoritesList(state, newFavoritesListDataFromServer) {
+      return state.favoritesList = newFavoritesListDataFromServer;
     },
   },
 
@@ -154,6 +161,26 @@ export default new Vuex.Store({
     },
     act_singleTwitDetailsData(context, newSingleTwitDetailsData) {
       context.commit('mut_singleTwitDetailsData', newSingleTwitDetailsData);
+    },
+    act_setFavoritesList(context) {
+      let url = `${context.state.apiPath}/favorites?count=50&screen_name=argentina`;
+      fetch(url).then((response) => {
+        if (response.status !== 200) {
+          console.log('200OK Twitter Trends: ' + response.status);
+          console.log('Twitter Trends: ' + response.status);
+          return;
+        }
+        response.json().then(function (data) {
+          // console.log('trends data: ', data[0].trends);
+          // data[0].trends.sort(function (a, b) {
+          //   return b.tweet_volume - a.tweet_volume;
+          // });
+          context.commit('mut_setFavoritesList', data);
+        });
+      })
+        .catch(function (err) {
+          console.log('Fetch Error :-S', err);
+        });
     }
   }
 });

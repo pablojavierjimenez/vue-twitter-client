@@ -2,7 +2,7 @@
     <div class="MenuNav">
       <router-link to="/configuration">
         <span class="link_icon">
-          <img src="../assets/icon/sharp-settings-24px.svg" />
+          <img src="../assets/icon/baseline-settings-20px-blanco.svg" />
         </span>
         <span class="link_text">configuration</span>
       </router-link>

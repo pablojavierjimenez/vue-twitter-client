@@ -79,7 +79,7 @@ export default {
       }
     }
     &__userId {
-      color: #b072ea;
+      color: #3e3860;
       a {
         text-decoration: none;
         color: inherit;

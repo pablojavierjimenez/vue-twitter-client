@@ -7,8 +7,8 @@
       <div class="UserSingleItem_dataRow UserSingleItem__userId">
         <a :href="userItemData.url" target="blank">@{{userItemData.screen_name}}</a>
       </div>
-      <div class="UserSingleItem_dataRow UserSingleItem__userDate">{{userItemData.location}}</div>
-      <div class="UserSingleItem_dataRow UserSingleItem__userDate">{{userItemData.description}}</div>
+      <div class="UserSingleItem_dataRow UserSingleItem__userLocation">{{userItemData.location}}</div>
+      <div class="UserSingleItem_dataRow UserSingleItem__userDescription">{{userItemData.description}}</div>
     </header>
 
     <section class="UserSingleItem__text">
@@ -69,9 +69,14 @@ export default {
         margin: 0 1vw 0 0;
         padding: 1vh 0;
       }
+      .UserSingleItem_dataRow {
+        line-height: 1.6rem;
+      }
     }
     &__userId {
-      color: #b072ea;
+      color: #ffffff;
+      font-weight: bold;
+      letter-spacing: .04rem;
       a {
         text-decoration: none;
         color: inherit;
@@ -97,5 +102,6 @@ export default {
         height: 2vmin;
       }
     }
+
   }
 </style>

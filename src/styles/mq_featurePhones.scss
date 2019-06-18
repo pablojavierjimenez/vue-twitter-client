@@ -37,11 +37,14 @@ $featurePhones_min-device-width: 150px;
           .menulink__container {
             display: none;
           }
+          .userAvatar__image {
+            max-width: 10vmin;
+          }
         }
 
         #main {
             // background-color: hsl(0, 0%, 7%);
-            // border: 1px solid #7042b9;
+            // border: 1px solid #3e3860;
             font-size: 12px;
             line-height: 15px;
             min-height: 100vh;
@@ -82,7 +85,7 @@ $featurePhones_min-device-width: 150px;
                 flex-wrap: nowrap;
               }
               .friends_item {
-                // border: 1px solid #7042b9;
+                // border: 1px solid #3e3860;
                 // background-color: rgb(165, 206, 32);
                 max-height: 129px;
                 min-width: 94vw;

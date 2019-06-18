@@ -20,14 +20,33 @@ $mobile_min-device-width: 375px;
           #mobiles_modo{
             display: block;
           }
+          .header_button__container {
+
+            a {
+              background-color: red;
+              .header_logo__image {
+                .header_logo__image {
+                  width: 10vmin;
+                  max-width: 10vmin;
+                }
+              }
+            }
+          }
           .menulink__container {
             display: none;
+          }
+          .header_button__container {
+            .userAvatar__image {
+              width: 9vmin;
+              max-width: 20vmin;
+              border-radius: 50%;
+            }
           }
         }
 
         #main {
             // background-color: rgb(235, 131, 33);
-            border: 1px solid #7042b9;
+            border: 1px solid #3e3860;
             min-height: 100vh;
             @extend %mobile_container;
         }

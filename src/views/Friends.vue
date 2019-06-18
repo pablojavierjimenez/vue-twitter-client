@@ -72,31 +72,32 @@
       padding: 0 1vw;
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     &_item {
-      border: 1px solid #42b983;
+      box-shadow: 0px 1px 2px grey;
       list-style: none;
       padding: 1vh .5vw;
       text-align: left;
       // background-color: orange;
-      min-width: 40vw;
+      min-width: 25vw;
       max-width: 50vw;
-      width: 40vw;
+      width: 27vw;
       margin: 2vmin;
       &__container {
-        // border-bottom: 1px solid #b072ea;
+        // border-bottom: 1px solid #3e3860;
         display: flex;
-        margin-bottom: 2vh;
+        // margin-bottom: 2vh;
       }
       &__user{
         // background-color: #2331fd;
         min-width: 10vmin;
         min-height: 10vmin;
-        &__image {
-          // width: 6vmin;
-          // max-width: 7vmin;
-        }
+        // &__image {
+        //   width: 6vmin;
+        //   max-width: 7vmin;
+        // }
       }
     }
   }
